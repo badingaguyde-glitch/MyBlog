@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blogum</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, darkblue, rgb(69, 16, 102), darkblue);
+            margin: 0;
+            align-items: flex-start;
+            justify-content: center;
+            color: rgba(0, 0, 0, 0);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: url("background.png");
+            background-repeat: repeat;
+            background-attachment: scroll;
+            background-position: top left;
+            background-size: auto;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        .navbar {
+            color: white;
+            background-color: rgba(0, 3, 20, 0.7);
+            top: 0;
+            padding: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-weight: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .left-bar {
+            color: white;
+            background: linear-gradient(to bottom, darkblue, rgb(69, 16, 102), darkblue);
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            font-weight: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .left-bar div {
+            border-bottom: 1px dashed white;
+            margin-left: 10px;
+            margin-right: 10px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .left-bar li {
+            padding: 5px;
+        }
+
+        img {
+            width: 160px;
+            height: 200px;
+        }
+
+        .left-bar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin: 10px;
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: optimizeQuality;
+        }
+
+        .left-bar img:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h6,
+        span,
+        li,
+        a {
+            color: black;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        div li {
+            text-align: start;
+            color: black;
+        }
+
+        a {
+            color: aqua;
+            font-size: 16px;
+            font-weight: 1000;
+        }
+
+        a:hover {
+            font-size: 18px;
+            color: aliceblue;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        li {
+            font-size: 16px;
+            color: white;
+            font-weight: 100;
+        }
+
+        .bord {
+            padding: 20px;
+            border-bottom: 1px dashed #193061;
+            margin: 50px;
+            margin-right: 100px;
+        }
+
+        footer {
+            background: linear-gradient(to right, darkblue, rgb(69, 16, 102), darkblue);
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100%;
+            color: white;
+            font-weight: 1000;
+            box-sizing: content-box;
+        }
+
+        footer div {
+            border-bottom: 0px;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        footer li {
+            padding: 3px;
+        }
+
+        footer div img {
+            width: 240px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navbar">
+        <div><img src="gabonais1.png" alt="adam1" title="adam1"></div>
+        <div>
+            <h1 style="padding-left: 200px; padding-right: 200px;font-size: 44px;color:white;text-align: center;">
+                Bloguma Hoşgeldiniz &#129309;:
+        </div>
+        <div><img class="profil" src="gabonais2.png" alt="adam2" title="adam2"></div>
+    </section>
+    <section class="container">
+        <div class="left-bar">
+            <section>
+                <img src="moi2.jpg" alt="Profil Fotoğrafı" title="Profil Fotoğrafı">
+            </section>
+            <section>
+                <div>
+                    <ul style="font-size: 24px;">Hobilerim
+                        <li>Basketbol</li>
+                        <li>Voleybol</li>
+                        <li>Video oyunları</li>
+                        <li>Kodlama</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <ul style="font-size: 24px;">Yeteneklerim
+                        <li>c#, JAVA, C++, GO</li>
+                        <li>İngilizce, Fransızca, Türkçe, (Rusça öğrenme aşamasında)</li>
+                        <li>HTML ve CSS</li>
+                        <li>SQL veritabanı sorguları</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img src="suleyman-demirel-universitesi-seeklogo.png" alt="Suleyman Demirel Üniversitesi Logosu"
+                        title="Suleyman Demirel Üniversitesi">
+                </div>
+                <div>
+                    <a href="https://w3.sdu.edu.tr/" target="_blank" style="text-decoration: none;">
+                        <label style="width: auto; height: 30px; font-size: 20px;
+                            display: block;
+                            font-family: cursive;
+                            text-align: center;
+                            border-radius: 10px;
+                            border-bottom: 2px solid rgb(195, 5, 5);padding-bottom: 2px;
+                            background:none;color: white;">Süleyman Demirel Üniversitesi</label>
+                    </a>
+                    <a href="https://muhendislik.sdu.edu.tr/bilmuh" target="_blank" style="text-decoration: none;">
+                        <label style="width: auto; height: 30px; font-size: 20px;
+                            display: block;
+                            font-family: cursive;
+                            text-align: center;
+                            border-radius: 10px;
+                            border-bottom: 2px solid rgb(195, 5, 5);padding-bottom: 2px;
+                            background:none;color: white;">Bilgisayar Mühendisliği</label>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section class="bord">
+                <p style="font-size: 20px;color:black;text-align: center;">Dünyamı keşfedin...</p>
+                <h1>Nereden geliyorum?</h1>
+                <div style="margin:40px;display: flex; position: relative;align-items: center;justify-content: center;">
+                    <div>
+                        <iframe width="800px" height="450px" src=https://www.youtube.com/embed/QIglnnJB7Bg
+                            title="Ülkemin Tanıtımı" frameborder="0" allow="autoplay;encrypted-media"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <p>Orta Afrika’da bulunan Gabon, yoğun ormanları, el değmemiş plajları ve biyolojik çeşitlilik açısından
+                    zengin milli parklarıyla doğal güzelliklerle dolu bir ülkedir. Kültürü, müzik, dans ve el sanatlarıyla
+                    yerel gelenekleri ve modern etkileri harmanlar. Petrol, manganez ve odun gibi doğal kaynaklar açısından
+                    zengin olan Gabon, aynı zamanda sahil boyunca ve Libreville ile Port-Gentil gibi büyük şehirlerde
+                    yaşayan misafirperver ve çok kültürlü bir nüfusa sahiptir.</p>
+
+            </section>
+            <section class="bord">
+                <div>
+                    <h2>İlk yıllarım</h2>
+                    <p>22 Aralık 2003’te Gabon’un Libreville şehrinde doğdum. 7 çocuklu bir ailenin ilk oğluyum.
+                        Çocukluğumda ailemle birlikte zor zamanlar geçirdik, parasız günlerimiz oldu ama her zaman imanımız
+                        ve yaşam ilkelerimiz sayesinde ayakta kaldık. Tüm bu zorluklara rağmen ailemizin birliği, istikrarı
+                        ve gücü sarsılmadı. <br>Babam bana her zaman kusursuz bir “Adam”, kendini ailesine adamış bir baba
+                        ve eş örneği oldu. Annemle birlikte bana çalışmayı, bilimleri, zorluklarla mücadeleyi ve iyi
+                        yaşam kurallarını öğrettiler. Tüm bunlar Hristiyan inancıyla yoğrulmuştu.<br>
+                    </p>
+                    <p style="text-align: center;">Tüm bunlar beni bugün olduğum insan yaptı.</p>
+                    <div style="display: flex; align-items: center;justify-content: center;">
+                        <P style="padding: 10px;text-align: center;">Kişiliğimin detayları:<br>Çalışkanım, netim ve
+                            öğrenmeyi seviyorum. Dünyaya hayran kalmayı, dikkatli ve meraklı kalmayı severim. Sosyal
+                            yeteneklerim ortalamanın biraz altında çünkü yalnız kalmayı, Tanrı ile ilişkimi ve çevremdeki
+                            dünyayı düşünmeyi seviyorum. Ama sevdiklerime çok değer veririm ve her zaman çevremdeki
+                            insanların iyiliğini isterim. <br>Hayatımda Mesih’in yansımasını göstermeye ve elimden geldiğince
+                            iyilik yapmaya gayret ederim. “Göz göze” ilkesine inanmıyorum, aksine “Kendine yapılmasını
+                            istemediğini başkasına yapma” ilkesini savunurum. Yardım istemekte zorlanırım çünkü kendi
+                            ayaklarım üzerinde durmayı severim ama sınırlarımı da bilirim. <br>Sevdiklerime karşı sık sık
+                            şakacı ve oyunbazım ve bana kendimi rahat hissettiren az sayıda insanla kaliteli vakit
+                            geçirmeyi severim.</P>
+                    </div>
+                    <h2>Okul Başarılarım</h2>
+                    <p>Asıl bilgisayar dünyasına Türkiye’ye geldiğimde adım attım ve derslerle birlikte yavaş yavaş
+                        öğrenmeye başladım. Daha sonra pratik yapmak için internette bulduğum egzersizler ve küçük
+                        projelerle kendimi geliştirmeye çalıştım. Böylece bazı küçük şeyler yaptım:</p>
+                    <ul>
+                        <li>JAVA ile yalnızca bir seviyeden oluşan basit bir Mario platform oyunu (JDE üzerinde
+                            çalıştırılabilir klasör olarak)</li>
+                        <li>Dosya gönderimi için WeTransfer’in bir kopyası (artık çevrimiçi değil, yanlışlıkla phishing
+                            olarak işaretlendiği için)</li>
+                        <li>Terminalde küçük hesaplama veya tahmin oyunları...</li>
+                    </ul>
+                    <p>Ancak hala yeteneklerimi tam anlamıyla geliştirmekten çok uzağım.</p>
+                    <h2>Gelecek Planlarım</h2>
+                    <p>Meslek hayatımda veri işleme alanına yönelmek istiyorum. Bu yıl veri ve veri işleme derslerimizle
+                        birlikte bu alana ilgim arttı, araştırmalar yapıyor ve ücretsiz çevrimiçi eğitimlere
+                        katılıyorum. Ayrıca Rusçayı akıcı bir şekilde öğrenmeyi, Python’u iyice kavramayı ve bana
+                        gelecekte yardımcı olacak yeni beceriler geliştirmeyi planlıyorum.
+                    </p>
+                </div>
+                <div
+                    style="padding: 20px; font-size: 18px;font-weight: 1000; font-style: italic;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    <p>Hayattaki amacım, ailemin hiçbir zaman bir eksiklik hissetmeden ihtiyaçlarını karşılayabilmelerini
+                        sağlamaktır. Bana yaptıkları iyiliği geri vermek, onların bana olan emeklerini ve güvenlerini
+                        onurlandırmak ve aynı zamanda kendi ayakları üzerinde duran, başarılı ve bağımsız bir adam olarak
+                        aileme bakabilmektir.
+                    </p>
+                    <p>Hayatta esasen kendi soyum dışında bir iz bırakmayı istemiyorum, ama bunun Tanrı’nın lütfuyla ve
+                        insanlara bırakacağım etkiyle kendiliğinden gerçekleşeceğine inanıyorum.</p>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <img src="gabon.png" alt="Gabon Bayrağı" title="Gabon Bayrağı">
+        </div>
+        <div style="border-right: 2px dashed white;">
+            <ul style="font-size: 24px;">İletişim
+                <br>
+                <li>+90 505 919 68 90</li>
+                <li>badingaguyde@gmail.com</li>
+                <li>frenybadinga@gmail.com</li>
+            </ul>
+        </div>
+        <div>
+            <ul style="font-size: 24px;">Bağlantılarım
+                <br>
+                <li><a href="https://www.instagram.com/badingaguyde?igsh=MTZ4dW41bWVtYXBrNA==" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/share/19phcSEmba/" target="_blank">Facebook</a></li>
+                <li><a href="http://t.me/BGuyde" target="_blank">Telegram</a></li>
+            </ul>
+        </div>
+        <div>
+            <img src="turquie.png" alt="Türkiye Bayrağı" title="Türkiye Bayrağı">
+        </div>
+    </footer>
+</body>
+</html>
