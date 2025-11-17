@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <title>Blogum</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body {
+            min-height: 100vh;
             background: linear-gradient(to bottom right, darkblue, rgb(69, 16, 102), darkblue);
-            margin: 0;
-            align-items: flex-start;
-            justify-content: center;
             color: rgba(0, 0, 0, 0);
             position: relative;
-            height: 100%;
-            width:100%;
             display: flex;
             flex-direction: column;
         }
 
-        .container {
-            display: flex;
-            flex-direction: row;
+        html, body {
             height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
         }
 
         body::before {
@@ -33,8 +33,6 @@
             right: 0;
             background-image: url("background.png");
             background-repeat: repeat;
-            background-attachment: scroll;
-            background-position: top left;
             background-size: auto;
             opacity: 1;
             z-index: -1;
@@ -43,53 +41,67 @@
         .navbar {
             color: white;
             background-color: rgba(0, 3, 20, 0.7);
-            top: 0;
             padding: 2px;
             width: 100%;
+            height: auto;
             box-sizing: border-box;
             display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 20px;
             font-weight: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
+            z-index: 1;
         }
 
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+        }
         .left-bar {
             color: white;
             background: linear-gradient(to bottom, darkblue, rgb(69, 16, 102), darkblue);
-            min-height: 100%;
-            width: 100%;
+            width: 25%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
-            font-weight: 1000;
+            padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
         }
 
-        .left-bar div {
-            border-bottom: 1px dashed white;
-            margin-left: 10px;
-            margin-right: 10px;
-            align-items: center;
+        .main-content {
+    flex: 1;
+    background: rgba(255,255,255,0.2);
+    position: relative;
+    width:75%;
+    padding: 20px;
+}
+        .left-bar section {
+            width: 100%;
+            text-align: center;
             justify-content: center;
+            margin:auto;
+        }
+        .left-bar div{
+            border-bottom: 1px dashed white;
+            margin:auto;
             color: white;
             text-align: center;
-            flex: 1;
+            text-align: center;
+            margin:1px;
         }
 
         .left-bar li {
-            padding: 5px;
+            padding: 0px;
         }
 
+
+
         img {
-            width: 160px;
-            height: 200px;
+            max-width: 100%;
+            height: auto;
         }
 
         .left-bar img {
@@ -117,12 +129,12 @@
         li,
         a {
             color: black;
-            margin-left: 100px;
-            margin-right: 100px;
+            text-align: justify;
         }
 
         div li {
-            text-align: start;
+            text-align: center;
+            margin: auto;
             color: black;
         }
 
@@ -143,24 +155,26 @@
             font-size: 16px;
             color: white;
             font-weight: 100;
+            padding: 5px;
         }
 
         .bord {
             padding: 20px;
             border-bottom: 1px dashed #193061;
             margin: 50px;
-            margin-right: 100px;
         }
 
         footer {
             background: linear-gradient(to right, darkblue, rgb(69, 16, 102), darkblue);
             display: flex;
+            align-items: center;
             flex-direction: row;
-            justify-content: start;
+            justify-content: space-around;
             width: 100%;
+            height: auto;
             color: white;
             font-weight: 1000;
-            box-sizing: content-box;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
         }
 
         footer div {
@@ -172,14 +186,6 @@
             flex: 1;
         }
 
-        footer li {
-            padding: 3px;
-        }
-
-        footer div img {
-            width: 240px;
-            height: 160px;
-        }
     </style>
 </head>
 
@@ -244,21 +250,22 @@
                 </div>
             </section>
         </div>
-        <div>
+        <div class="main-content">
             <section class="bord">
                 <p style="font-size: 20px;color:black;text-align: center;">Dünyamı keşfedin...</p>
                 <h1>Nereden geliyorum?</h1>
                 <div style="margin:40px;display: flex; position: relative;align-items: center;justify-content: center;">
                     <div>
-                        <iframe width="800px" height="450px" src=https://www.youtube.com/embed/QIglnnJB7Bg
-                            title="Ülkemin Tanıtımı" frameborder="0" allow="autoplay;encrypted-media"
-                            allowfullscreen>
+                        <iframe width="100%" height="auto" src=https://www.youtube.com/embed/QIglnnJB7Bg
+                            title="Ülkemin Tanıtımı" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen>
                         </iframe>
                     </div>
                 </div>
                 <p>Orta Afrika’da bulunan Gabon, yoğun ormanları, el değmemiş plajları ve biyolojik çeşitlilik açısından
-                    zengin milli parklarıyla doğal güzelliklerle dolu bir ülkedir. Kültürü, müzik, dans ve el sanatlarıyla
-                    yerel gelenekleri ve modern etkileri harmanlar. Petrol, manganez ve odun gibi doğal kaynaklar açısından
+                    zengin milli parklarıyla doğal güzelliklerle dolu bir ülkedir. Kültürü, müzik, dans ve el
+                    sanatlarıyla
+                    yerel gelenekleri ve modern etkileri harmanlar. Petrol, manganez ve odun gibi doğal kaynaklar
+                    açısından
                     zengin olan Gabon, aynı zamanda sahil boyunca ve Libreville ile Port-Gentil gibi büyük şehirlerde
                     yaşayan misafirperver ve çok kültürlü bir nüfusa sahiptir.</p>
 
@@ -267,9 +274,12 @@
                 <div>
                     <h2>İlk yıllarım</h2>
                     <p>22 Aralık 2003’te Gabon’un Libreville şehrinde doğdum. 7 çocuklu bir ailenin ilk oğluyum.
-                        Çocukluğumda ailemle birlikte zor zamanlar geçirdik, parasız günlerimiz oldu ama her zaman imanımız
-                        ve yaşam ilkelerimiz sayesinde ayakta kaldık. Tüm bu zorluklara rağmen ailemizin birliği, istikrarı
-                        ve gücü sarsılmadı. <br>Babam bana her zaman kusursuz bir “Adam”, kendini ailesine adamış bir baba
+                        Çocukluğumda ailemle birlikte zor zamanlar geçirdik, parasız günlerimiz oldu ama her zaman
+                        imanımız
+                        ve yaşam ilkelerimiz sayesinde ayakta kaldık. Tüm bu zorluklara rağmen ailemizin birliği,
+                        istikrarı
+                        ve gücü sarsılmadı. <br>Babam bana her zaman kusursuz bir “Adam”, kendini ailesine adamış bir
+                        baba
                         ve eş örneği oldu. Annemle birlikte bana çalışmayı, bilimleri, zorluklarla mücadeleyi ve iyi
                         yaşam kurallarını öğrettiler. Tüm bunlar Hristiyan inancıyla yoğrulmuştu.<br>
                     </p>
@@ -277,12 +287,15 @@
                     <div style="display: flex; align-items: center;justify-content: center;">
                         <P style="padding: 10px;text-align: center;">Kişiliğimin detayları:<br>Çalışkanım, netim ve
                             öğrenmeyi seviyorum. Dünyaya hayran kalmayı, dikkatli ve meraklı kalmayı severim. Sosyal
-                            yeteneklerim ortalamanın biraz altında çünkü yalnız kalmayı, Tanrı ile ilişkimi ve çevremdeki
+                            yeteneklerim ortalamanın biraz altında çünkü yalnız kalmayı, Tanrı ile ilişkimi ve
+                            çevremdeki
                             dünyayı düşünmeyi seviyorum. Ama sevdiklerime çok değer veririm ve her zaman çevremdeki
-                            insanların iyiliğini isterim. <br>Hayatımda Mesih’in yansımasını göstermeye ve elimden geldiğince
+                            insanların iyiliğini isterim. <br>Hayatımda Mesih’in yansımasını göstermeye ve elimden
+                            geldiğince
                             iyilik yapmaya gayret ederim. “Göz göze” ilkesine inanmıyorum, aksine “Kendine yapılmasını
                             istemediğini başkasına yapma” ilkesini savunurum. Yardım istemekte zorlanırım çünkü kendi
-                            ayaklarım üzerinde durmayı severim ama sınırlarımı da bilirim. <br>Sevdiklerime karşı sık sık
+                            ayaklarım üzerinde durmayı severim ama sınırlarımı da bilirim. <br>Sevdiklerime karşı sık
+                            sık
                             şakacı ve oyunbazım ve bana kendimi rahat hissettiren az sayıda insanla kaliteli vakit
                             geçirmeyi severim.</P>
                     </div>
@@ -307,9 +320,11 @@
                 </div>
                 <div
                     style="padding: 20px; font-size: 18px;font-weight: 1000; font-style: italic;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    <p>Hayattaki amacım, ailemin hiçbir zaman bir eksiklik hissetmeden ihtiyaçlarını karşılayabilmelerini
+                    <p>Hayattaki amacım, ailemin hiçbir zaman bir eksiklik hissetmeden ihtiyaçlarını
+                        karşılayabilmelerini
                         sağlamaktır. Bana yaptıkları iyiliği geri vermek, onların bana olan emeklerini ve güvenlerini
-                        onurlandırmak ve aynı zamanda kendi ayakları üzerinde duran, başarılı ve bağımsız bir adam olarak
+                        onurlandırmak ve aynı zamanda kendi ayakları üzerinde duran, başarılı ve bağımsız bir adam
+                        olarak
                         aileme bakabilmektir.
                     </p>
                     <p>Hayatta esasen kendi soyum dışında bir iz bırakmayı istemiyorum, ama bunun Tanrı’nın lütfuyla ve
@@ -333,7 +348,8 @@
         <div>
             <ul style="font-size: 24px;">Bağlantılarım
                 <br>
-                <li><a href="https://www.instagram.com/badingaguyde?igsh=MTZ4dW41bWVtYXBrNA==" target="_blank">Instagram</a></li>
+                <li><a href="https://www.instagram.com/badingaguyde?igsh=MTZ4dW41bWVtYXBrNA=="
+                        target="_blank">Instagram</a></li>
                 <li><a href="https://www.facebook.com/share/19phcSEmba/" target="_blank">Facebook</a></li>
                 <li><a href="http://t.me/BGuyde" target="_blank">Telegram</a></li>
             </ul>
@@ -343,4 +359,5 @@
         </div>
     </footer>
 </body>
+
 </html>
